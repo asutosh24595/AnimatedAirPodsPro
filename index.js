@@ -46,11 +46,11 @@ window.addEventListener('scroll', () => {
 preloadImages();
 
 document.addEventListener("DOMContentLoaded", function () {
-  var navContent = document.querySelector('.airpods-navbar');
-  var stickyOffset = navContent.offsetTop;
+  let navContent = document.querySelector('.airpods-navbar');
+  let stickyOffset = navContent.offsetTop;
 
   function handleScroll() {
-    if (window.pageYOffset >= stickyOffset) {
+    if (window.scrollY >= stickyOffset) {
       navContent.classList.add('sticky');
     } else {
       navContent.classList.remove('sticky');
@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var mainElem = document.querySelector('.main-elem');
+  let mainElem = document.querySelector('.main-elem');
 
   function handleScroll() {
     // Determine the scroll position
-    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     // Check if the scroll position is beyond a certain point
     if (scrollPosition > 50) { // Adjust this threshold as needed
